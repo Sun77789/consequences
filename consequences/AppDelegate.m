@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <Facebook.h>
+#import "LoginViewController.h"
 
 @implementation AppDelegate
 
@@ -70,8 +71,10 @@
 - (void) chooseFirstViewControllerBasedOnLogIn
 {
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self.window.rootViewController performSegueWithIdentifier:@"firstViewSegue" sender:self];
+        //[self.window.rootViewController performSegueWithIdentifier:@"firstViewSegue" sender:self];
     } else {
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        self.window.rootViewController = loginViewController;
     }
 }
 
