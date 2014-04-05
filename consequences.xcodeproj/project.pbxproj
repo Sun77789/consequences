@@ -14,11 +14,13 @@
 		1F0158DD18F09B8A00632233 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0158DC18F09B8A00632233 /* main.m */; };
 		1F0158E118F09B8A00632233 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0158E018F09B8A00632233 /* AppDelegate.m */; };
 		1F0158E418F09B8A00632233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0158E218F09B8A00632233 /* Main.storyboard */; };
-		1F0158E718F09B8A00632233 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0158E618F09B8A00632233 /* ViewController.m */; };
 		1F0158E918F09B8A00632233 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0158E818F09B8A00632233 /* Images.xcassets */; };
 		1F0158F018F09B8A00632233 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158EF18F09B8A00632233 /* XCTest.framework */; };
 		1F0158F118F09B8A00632233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D018F09B8A00632233 /* Foundation.framework */; };
 		1F0158F218F09B8A00632233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D418F09B8A00632233 /* UIKit.framework */; };
+		A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44418F0A74600BF24B4 /* LoginViewController.m */; };
+		A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44618F0A74600BF24B4 /* customizedLoginViewController.m */; };
+		A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4F8C44918F0AB2E00BF24B4 /* 1.jpg */; };
 		CD735E2D9E0C47C4B0B417E4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -45,12 +47,15 @@
 		1F0158DF18F09B8A00632233 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F0158E018F09B8A00632233 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F0158E318F09B8A00632233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F0158E518F09B8A00632233 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1F0158E618F09B8A00632233 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1F0158E818F09B8A00632233 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F0158EE18F09B8A00632233 /* consequencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = consequencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0158EF18F09B8A00632233 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F8C44318F0A74600BF24B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A4F8C44418F0A74600BF24B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A4F8C44518F0A74600BF24B4 /* customizedLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customizedLoginViewController.h; sourceTree = "<group>"; };
+		A4F8C44618F0A74600BF24B4 /* customizedLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customizedLoginViewController.m; sourceTree = "<group>"; };
+		A4F8C44918F0AB2E00BF24B4 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +120,8 @@
 				1F0158DF18F09B8A00632233 /* AppDelegate.h */,
 				1F0158E018F09B8A00632233 /* AppDelegate.m */,
 				1F0158E218F09B8A00632233 /* Main.storyboard */,
-				1F0158E518F09B8A00632233 /* ViewController.h */,
-				1F0158E618F09B8A00632233 /* ViewController.m */,
+				A4F8C44B18F0ABAD00BF24B4 /* Login */,
+				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
 				1F0158E818F09B8A00632233 /* Images.xcassets */,
 				1F0158D718F09B8A00632233 /* Supporting Files */,
 			);
@@ -132,6 +137,17 @@
 				1F0158DE18F09B8A00632233 /* consequences-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4F8C44B18F0ABAD00BF24B4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A4F8C44318F0A74600BF24B4 /* LoginViewController.h */,
+				A4F8C44418F0A74600BF24B4 /* LoginViewController.m */,
+				A4F8C44518F0A74600BF24B4 /* customizedLoginViewController.h */,
+				A4F8C44618F0A74600BF24B4 /* customizedLoginViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F0158E918F09B8A00632233 /* Images.xcassets in Resources */,
+				A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */,
 				1F0158DB18F09B8A00632233 /* InfoPlist.strings in Resources */,
 				1F0158E418F09B8A00632233 /* Main.storyboard in Resources */,
 			);
@@ -268,8 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0158E718F09B8A00632233 /* ViewController.m in Sources */,
+				A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */,
 				1F0158E118F09B8A00632233 /* AppDelegate.m in Sources */,
+				A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */,
 				1F0158DD18F09B8A00632233 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
