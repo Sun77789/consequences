@@ -18,6 +18,8 @@
 		1F0158F018F09B8A00632233 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158EF18F09B8A00632233 /* XCTest.framework */; };
 		1F0158F118F09B8A00632233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D018F09B8A00632233 /* Foundation.framework */; };
 		1F0158F218F09B8A00632233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D418F09B8A00632233 /* UIKit.framework */; };
+		1FE9E52418F0BAE000770229 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52318F0BAE000770229 /* DataController.m */; };
+		1FE9E52818F0C2BB00770229 /* TimeViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */; };
 		A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44418F0A74600BF24B4 /* LoginViewController.m */; };
 		A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44618F0A74600BF24B4 /* customizedLoginViewController.m */; };
 		A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4F8C44918F0AB2E00BF24B4 /* 1.jpg */; };
@@ -50,8 +52,10 @@
 		1F0158E818F09B8A00632233 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F0158EE18F09B8A00632233 /* consequencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = consequencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0158EF18F09B8A00632233 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1F6F05D018F0A4BC00A73182 /* Data Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Data Controller.h"; sourceTree = "<group>"; };
-		1F6F05D118F0A4BC00A73182 /* Data Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Data Controller.m"; sourceTree = "<group>"; };
+		1FE9E52218F0BAE000770229 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataController.h; path = DataController/DataController.h; sourceTree = "<group>"; };
+		1FE9E52318F0BAE000770229 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataController.m; path = DataController/DataController.m; sourceTree = "<group>"; };
+		1FE9E52618F0C2BB00770229 /* TimeViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeViewViewController.h; path = TimeView/TimeViewViewController.h; sourceTree = "<group>"; };
+		1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeViewViewController.m; path = TimeView/TimeViewViewController.m; sourceTree = "<group>"; };
 		2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F8C44318F0A74600BF24B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A4F8C44418F0A74600BF24B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -122,7 +126,9 @@
 				1F0158DF18F09B8A00632233 /* AppDelegate.h */,
 				1F0158E018F09B8A00632233 /* AppDelegate.m */,
 				1F0158E218F09B8A00632233 /* Main.storyboard */,
+				1FE9E52518F0BAE400770229 /* Data */,
 				A4F8C44B18F0ABAD00BF24B4 /* Login */,
+				1FE9E52918F0C2CE00770229 /* Time View */,
 				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
 				1F0158E818F09B8A00632233 /* Images.xcassets */,
 				1F0158D718F09B8A00632233 /* Supporting Files */,
@@ -139,6 +145,24 @@
 				1F0158DE18F09B8A00632233 /* consequences-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FE9E52518F0BAE400770229 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1FE9E52218F0BAE000770229 /* DataController.h */,
+				1FE9E52318F0BAE000770229 /* DataController.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		1FE9E52918F0C2CE00770229 /* Time View */ = {
+			isa = PBXGroup;
+			children = (
+				1FE9E52618F0C2BB00770229 /* TimeViewViewController.h */,
+				1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */,
+			);
+			name = "Time View";
 			sourceTree = "<group>";
 		};
 		A4F8C44B18F0ABAD00BF24B4 /* Login */ = {
@@ -287,9 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE9E52818F0C2BB00770229 /* TimeViewViewController.m in Sources */,
 				A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */,
 				1F0158E118F09B8A00632233 /* AppDelegate.m in Sources */,
 				A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */,
+				1FE9E52418F0BAE000770229 /* DataController.m in Sources */,
 				1F0158DD18F09B8A00632233 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/Parse.h>
+#import "Data Controller.h"
 #import "customizedLoginViewController.h"
 
 @interface LoginViewController : UIViewController <PFLogInViewControllerDelegate>
