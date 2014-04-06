@@ -23,6 +23,7 @@
 -(NSString *) getCategory;
 -(NSString *)getAddress;
 -(NSDate *) getDate;
+-(NSString *)getName;
 
 -(BOOL)isFitnessOrClass;
 

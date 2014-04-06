@@ -18,15 +18,20 @@
 @implementation CategoriesViewViewController
 
 
+- (void)alertWithTitle:(NSString*)title andMessage:(NSString*)message
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Oh my bad..."
+                                          otherButtonTitles:nil];
+    
+    [alert show];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     categories = [[DataController sharedManager] getCategories];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [taskNameF becomeFirstResponder];
 }
 
 
@@ -62,6 +67,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self dropKeyboard:nil];
+    
+    if (taskNameF.text.length < 1)
+    {
+        [self alertWithTitle:@"Can you accomplish nothing!?"
+                  andMessage:@"(facepalm)"];
+        return;
+    }
     
     [[DataController sharedManager] initTaskWithCategory:categories[indexPath.row]
                                                          andName:taskNameF.text];

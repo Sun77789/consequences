@@ -52,23 +52,6 @@ static dispatch_once_t onceToken;
 }
 
 
--(NSString *)getAddress
-{
-    if(!currentTask[@"address"]) return @"";
-    
-    return currentTask[@"address"];
-}
-
--(NSArray*)getCategories
-{
-    return @[@"Attend Class",
-             @"Fitness",
-             @"Homework",
-             @"Chores",
-             @"Custom"];
-}
-
-
 -(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name
 {
     currentTask[@"category"] = category;
@@ -90,6 +73,27 @@ static dispatch_once_t onceToken;
     currentTask[@"address"] = locationAddress;
 }
 
+
+#pragma mark - Getters
+
+-(NSString *)getAddress
+{
+    if(!currentTask[@"address"]) return @"";
+    
+    return currentTask[@"address"];
+}
+-(NSArray*)getCategories
+{
+    return @[@"Attend Class",
+             @"Fitness",
+             @"Homework",
+             @"Chores",
+             @"Custom"];
+}
+-(NSString *)getName
+{
+    return currentTask[@"name"];
+}
 -(NSString *) getCategory
 {
     return currentTask[@"category"];

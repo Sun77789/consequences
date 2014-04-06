@@ -16,16 +16,10 @@
 
 @implementation LoginViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    NSLog(@"View appeared");
     
     if (![PFUser currentUser]) {
         // If not logged in, we will show a PFLogInViewController
@@ -63,10 +57,6 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    //[[PFUser currentUser] setObject:[FBSession activeSession].accessTokenData.accessToken
-                             //forKey:@"accessToken"];
-    //[[PFUser currentUser] saveInBackground];
-    NSLog(@"DidLoginUser");
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

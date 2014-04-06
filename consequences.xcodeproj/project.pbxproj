@@ -14,14 +14,24 @@
 		1F0158DD18F09B8A00632233 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0158DC18F09B8A00632233 /* main.m */; };
 		1F0158E118F09B8A00632233 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0158E018F09B8A00632233 /* AppDelegate.m */; };
 		1F0158E418F09B8A00632233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0158E218F09B8A00632233 /* Main.storyboard */; };
-		1F0158E918F09B8A00632233 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0158E818F09B8A00632233 /* Images.xcassets */; };
 		1F0158F018F09B8A00632233 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158EF18F09B8A00632233 /* XCTest.framework */; };
 		1F0158F118F09B8A00632233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D018F09B8A00632233 /* Foundation.framework */; };
 		1F0158F218F09B8A00632233 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0158D418F09B8A00632233 /* UIKit.framework */; };
+		1F1293B318F1AA1B00FEB8FC /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293AC18F1AA1B00FEB8FC /* icon29.png */; };
+		1F1293B418F1AA1B00FEB8FC /* icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293AD18F1AA1B00FEB8FC /* icon40.png */; };
+		1F1293B518F1AA1B00FEB8FC /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293AE18F1AA1B00FEB8FC /* icon58.png */; };
+		1F1293B618F1AA1B00FEB8FC /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293AF18F1AA1B00FEB8FC /* icon80.png */; };
+		1F1293B718F1AA1B00FEB8FC /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293B018F1AA1B00FEB8FC /* icon120.png */; };
+		1F1293B818F1AA1B00FEB8FC /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293B118F1AA1B00FEB8FC /* launch.png */; };
+		1F1293B918F1AA1B00FEB8FC /* launch5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293B218F1AA1B00FEB8FC /* launch5.png */; };
+		1F1293BC18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1293BB18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.m */; };
+		1F1293BE18F1B15600FEB8FC /* slice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1293BD18F1B15600FEB8FC /* slice.png */; };
 		1F96D2DD18F0ECD60015E98F /* CategoriesViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F96D2DC18F0ECD60015E98F /* CategoriesViewViewController.m */; };
 		1F96D2E118F0F3380015E98F /* OngoingTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F96D2E018F0F3380015E98F /* OngoingTaskViewController.m */; };
 		1FE9E52418F0BAE000770229 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52318F0BAE000770229 /* DataController.m */; };
 		1FE9E52818F0C2BB00770229 /* TimeViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */; };
+		1FF7C29818F146D30037B802 /* fail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7C29618F146D30037B802 /* fail.jpg */; };
+		1FF7C29918F146D30037B802 /* success.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7C29718F146D30037B802 /* success.gif */; };
 		A4AEA86118F1146700669345 /* locationViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA86018F1146700669345 /* locationViewViewController.m */; };
 		A4AEA86418F1277800669345 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AEA86318F1277800669345 /* MapKit.framework */; };
 		A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44418F0A74600BF24B4 /* LoginViewController.m */; };
@@ -53,9 +63,18 @@
 		1F0158DF18F09B8A00632233 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F0158E018F09B8A00632233 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1F0158E318F09B8A00632233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1F0158E818F09B8A00632233 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F0158EE18F09B8A00632233 /* consequencesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = consequencesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0158EF18F09B8A00632233 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1F1293AC18F1AA1B00FEB8FC /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon29.png; path = Graphics/icon29.png; sourceTree = SOURCE_ROOT; };
+		1F1293AD18F1AA1B00FEB8FC /* icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon40.png; path = Graphics/icon40.png; sourceTree = SOURCE_ROOT; };
+		1F1293AE18F1AA1B00FEB8FC /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon58.png; path = Graphics/icon58.png; sourceTree = SOURCE_ROOT; };
+		1F1293AF18F1AA1B00FEB8FC /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon80.png; path = Graphics/icon80.png; sourceTree = SOURCE_ROOT; };
+		1F1293B018F1AA1B00FEB8FC /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon120.png; path = Graphics/icon120.png; sourceTree = SOURCE_ROOT; };
+		1F1293B118F1AA1B00FEB8FC /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch.png; path = Graphics/launch.png; sourceTree = SOURCE_ROOT; };
+		1F1293B218F1AA1B00FEB8FC /* launch5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = launch5.png; path = Graphics/launch5.png; sourceTree = SOURCE_ROOT; };
+		1F1293BA18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneFingerRotationGestureRecognizer.h; sourceTree = "<group>"; };
+		1F1293BB18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneFingerRotationGestureRecognizer.m; sourceTree = "<group>"; };
+		1F1293BD18F1B15600FEB8FC /* slice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slice.png; path = Graphics/slice.png; sourceTree = SOURCE_ROOT; };
 		1F96D2DB18F0ECD60015E98F /* CategoriesViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesViewViewController.h; path = "Categories View/CategoriesViewViewController.h"; sourceTree = "<group>"; };
 		1F96D2DC18F0ECD60015E98F /* CategoriesViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesViewViewController.m; path = "Categories View/CategoriesViewViewController.m"; sourceTree = "<group>"; };
 		1F96D2DF18F0F3380015E98F /* OngoingTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OngoingTaskViewController.h; path = "Ongoing Task/OngoingTaskViewController.h"; sourceTree = "<group>"; };
@@ -64,6 +83,8 @@
 		1FE9E52318F0BAE000770229 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataController.m; path = DataController/DataController.m; sourceTree = "<group>"; };
 		1FE9E52618F0C2BB00770229 /* TimeViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeViewViewController.h; path = TimeView/TimeViewViewController.h; sourceTree = "<group>"; };
 		1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeViewViewController.m; path = TimeView/TimeViewViewController.m; sourceTree = "<group>"; };
+		1FF7C29618F146D30037B802 /* fail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fail.jpg; path = ../../graphics/fail.jpg; sourceTree = "<group>"; };
+		1FF7C29718F146D30037B802 /* success.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = success.gif; path = ../../graphics/success.gif; sourceTree = "<group>"; };
 		2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA85F18F1146700669345 /* locationViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationViewViewController.h; sourceTree = "<group>"; };
 		A4AEA86018F1146700669345 /* locationViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationViewViewController.m; sourceTree = "<group>"; };
@@ -136,6 +157,7 @@
 		1F0158D618F09B8A00632233 /* consequences */ = {
 			isa = PBXGroup;
 			children = (
+				1FF7C29A18F146D60037B802 /* Images */,
 				1F0158DF18F09B8A00632233 /* AppDelegate.h */,
 				1F0158E018F09B8A00632233 /* AppDelegate.m */,
 				1F0158E218F09B8A00632233 /* Main.storyboard */,
@@ -143,10 +165,8 @@
 				A4F8C44B18F0ABAD00BF24B4 /* Login */,
 				1F96D2DE18F0ECDA0015E98F /* Categories View */,
 				1FE9E52918F0C2CE00770229 /* Time View */,
-				1F96D2E218F0F33C0015E98F /* Ongoing task */,
-				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
+				1F96D2E218F0F33C0015E98F /* Ongoing Task View */,
 				A4AEA86218F1148600669345 /* Location View */,
-				1F0158E818F09B8A00632233 /* Images.xcassets */,
 				1F0158D718F09B8A00632233 /* Supporting Files */,
 			);
 			path = consequences;
@@ -172,13 +192,15 @@
 			name = "Categories View";
 			sourceTree = "<group>";
 		};
-		1F96D2E218F0F33C0015E98F /* Ongoing task */ = {
+		1F96D2E218F0F33C0015E98F /* Ongoing Task View */ = {
 			isa = PBXGroup;
 			children = (
 				1F96D2DF18F0F3380015E98F /* OngoingTaskViewController.h */,
 				1F96D2E018F0F3380015E98F /* OngoingTaskViewController.m */,
+				1F1293BA18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.h */,
+				1F1293BB18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.m */,
 			);
-			name = "Ongoing task";
+			name = "Ongoing Task View";
 			sourceTree = "<group>";
 		};
 		1FE9E52518F0BAE400770229 /* Data */ = {
@@ -197,6 +219,24 @@
 				1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */,
 			);
 			name = "Time View";
+			sourceTree = "<group>";
+		};
+		1FF7C29A18F146D60037B802 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
+				1FF7C29618F146D30037B802 /* fail.jpg */,
+				1FF7C29718F146D30037B802 /* success.gif */,
+				1F1293AC18F1AA1B00FEB8FC /* icon29.png */,
+				1F1293AD18F1AA1B00FEB8FC /* icon40.png */,
+				1F1293AE18F1AA1B00FEB8FC /* icon58.png */,
+				1F1293AF18F1AA1B00FEB8FC /* icon80.png */,
+				1F1293B018F1AA1B00FEB8FC /* icon120.png */,
+				1F1293B118F1AA1B00FEB8FC /* launch.png */,
+				1F1293B218F1AA1B00FEB8FC /* launch5.png */,
+				1F1293BD18F1B15600FEB8FC /* slice.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		A4AEA86218F1148600669345 /* Location View */ = {
@@ -300,9 +340,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0158E918F09B8A00632233 /* Images.xcassets in Resources */,
+				1F1293BE18F1B15600FEB8FC /* slice.png in Resources */,
+				1F1293B818F1AA1B00FEB8FC /* launch.png in Resources */,
+				1F1293B318F1AA1B00FEB8FC /* icon29.png in Resources */,
+				1F1293B918F1AA1B00FEB8FC /* launch5.png in Resources */,
+				1F1293B418F1AA1B00FEB8FC /* icon40.png in Resources */,
+				1FF7C29818F146D30037B802 /* fail.jpg in Resources */,
+				1F1293B618F1AA1B00FEB8FC /* icon80.png in Resources */,
 				A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */,
 				1F0158DB18F09B8A00632233 /* InfoPlist.strings in Resources */,
+				1F1293B718F1AA1B00FEB8FC /* icon120.png in Resources */,
+				1F1293B518F1AA1B00FEB8FC /* icon58.png in Resources */,
+				1FF7C29918F146D30037B802 /* success.gif in Resources */,
 				1F0158E418F09B8A00632233 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +410,7 @@
 				A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */,
 				1FE9E52418F0BAE000770229 /* DataController.m in Sources */,
 				A4AEA86118F1146700669345 /* locationViewViewController.m in Sources */,
+				1F1293BC18F1AD2C00FEB8FC /* OneFingerRotationGestureRecognizer.m in Sources */,
 				1F0158DD18F09B8A00632233 /* main.m in Sources */,
 				1F96D2DD18F0ECD60015E98F /* CategoriesViewViewController.m in Sources */,
 			);
@@ -477,8 +527,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 108E47C16B534A0EA26E5F46 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "consequences/consequences-Prefix.pch";
@@ -492,8 +540,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 108E47C16B534A0EA26E5F46 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "consequences/consequences-Prefix.pch";
