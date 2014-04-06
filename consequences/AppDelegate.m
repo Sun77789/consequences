@@ -71,10 +71,9 @@
 - (void) chooseFirstViewControllerBasedOnLogIn
 {
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        //[self.window.rootViewController performSegueWithIdentifier:@"firstViewSegue" sender:self];
+        [self.window.rootViewController performSegueWithIdentifier:@"firstViewSegue" sender:self];
     } else {
-        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-        self.window.rootViewController = loginViewController;
+        [self.window.rootViewController performSegueWithIdentifier:@"loginViewSegue" sender:self];
     }
 }
 

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeViewViewController : UIViewController
+@interface TimeViewViewController : UIViewController{}
 
 -(IBAction)testTask:(id)sender;
 
+    
 @end

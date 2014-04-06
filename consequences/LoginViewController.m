@@ -29,12 +29,6 @@
     if ([PFUser currentUser]) {
         self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
         NSLog(@"After: %@", _chosenUni);
-        /*
-        if (!self.chosenUni) {
-        PFUser *user = [PFUser currentUser];
-        [user setObject:self.chosenUni forKey:@"school"];
-        }
-         */
     } else {
         self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
@@ -80,7 +74,10 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
+    NSString *token = [[PFFacebookUtils session] accessToken];
+    [[PFUser currentUser] setObject:token forKey:@"accessToken"];
     [self dismissViewControllerAnimated:YES completion:NULL];
+    //[self performSegueWithIdentifier:@"login" sender:self];
 }
 
 // Sent to the delegate when the log in attempt fails.
