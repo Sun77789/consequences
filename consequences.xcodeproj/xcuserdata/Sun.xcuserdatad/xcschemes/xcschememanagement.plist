@@ -4,35 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
+		<key>consequences.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Parse.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EC258A9BA514086917FCB36</key>
+		<key>1F0158CC18F09B8A00632233</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6232ADF02BD94A4DB473AA0D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EB3A47D58FF54B3CB5D46B50</key>
+		<key>1F0158ED18F09B8A00632233</key>
 		<dict>
 			<key>primary</key>
 			<true/>

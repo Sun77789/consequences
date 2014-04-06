@@ -6,18 +6,18 @@
 	<dict>
 		<key>Pods-Facebook-iOS-SDK.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-Parse.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -27,7 +27,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3AE7A476816243F9A3D2EBC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>510852E67BEC480F898304E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6232ADF02BD94A4DB473AA0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>995A366A5B734D5785E72A33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
