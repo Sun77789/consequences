@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="243"/>
+            <point key="canvasLocation" x="499" y="115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5og-jJ-1GJ">
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="78" y="-481"/>
         </scene>
-        <!--View Controller-->
+        <!--Categories View View Controller - Pick a category...-->
         <scene sceneID="6um-4m-krA">
             <objects>
-                <viewController id="GOe-Vl-X7d" sceneMemberID="viewController">
+                <viewController id="GOe-Vl-X7d" customClass="CategoriesViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FnV-Y1-1AJ"/>
                         <viewControllerLayoutGuide type="bottom" id="EZR-hH-dqu"/>
@@ -60,29 +60,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arI-TM-1bU">
-                                <rect key="frame" x="100" y="93" width="113" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-Wz-f2A">
+                                <rect key="frame" x="116" y="96" width="89" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aMm-0A-PeB">
-                                <rect key="frame" x="20" y="166" width="280" height="30"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S8L-vI-qye">
+                                <rect key="frame" x="0.0" y="218" width="320" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" id="Ybx-pG-Nfs">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ybx-pG-Nfs" id="LZt-Ws-eyX">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0iL-W4-MsU" kind="push" identifier="showTime" trigger="accessoryAction" id="bio-1d-DPx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GOe-Vl-X7d" id="kAX-9N-8ao"/>
+                                    <outlet property="delegate" destination="GOe-Vl-X7d" id="Nx1-vC-5YN"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name for your task..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ewo-oh-n0h" userLabel="Task Name">
+                                <rect key="frame" x="20" y="163" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dropKeyboard:" destination="GOe-Vl-X7d" eventType="editingDidEndOnExit" id="0AL-iy-KP4"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BM5-rH-Hu3"/>
+                    <navigationItem key="navigationItem" title="Pick a category..." id="BM5-rH-Hu3"/>
+                    <connections>
+                        <outlet property="categoriesTable" destination="S8L-vI-qye" id="qYR-JK-lhi"/>
+                        <outlet property="taskNameF" destination="ewo-oh-n0h" id="ain-ms-75p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbB-V4-n0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="644"/>
+            <point key="canvasLocation" x="1318" y="-481"/>
         </scene>
-        <!--Time View View Controller-->
+        <!--Time View View Controller - When will you achieve greatness?-->
         <scene sceneID="zUS-aE-9Od">
             <objects>
                 <viewController id="0iL-W4-MsU" customClass="TimeViewViewController" sceneMemberID="viewController">
@@ -90,12 +120,12 @@
                         <viewControllerLayoutGuide type="top" id="UwQ-6R-52e"/>
                         <viewControllerLayoutGuide type="bottom" id="vOF-bx-AXH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="w5q-Lo-qgx">
+                    <view key="view" contentMode="scaleToFill" id="w5q-Lo-qgx" customClass="TimeView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qVQ-II-exp">
-                                <rect key="frame" x="20" y="194" width="280" height="162"/>
+                                <rect key="frame" x="20" y="238" width="280" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="418429879.01859599">
                                     <!--2014-04-05 22:31:19 +0000-->
@@ -121,59 +151,108 @@ AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
 AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
+                                <connections>
+                                    <action selector="timeChanged:" destination="0iL-W4-MsU" eventType="valueChanged" id="xb1-Ay-5NS"/>
+                                </connections>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vhY-er-oPm">
-                                <rect key="frame" x="49" y="146" width="222" height="29"/>
+                                <rect key="frame" x="49" y="163" width="222" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Now"/>
                                     <segment title="Later"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTimeOption:" destination="0iL-W4-MsU" eventType="valueChanged" id="x5n-yK-T7L"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR5-m0-Qgf">
-                                <rect key="frame" x="139" y="96" width="45" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR5-m0-Qgf">
+                                <rect key="frame" x="101" y="96" width="119" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khd-5g-qMv">
-                                <rect key="frame" x="139" y="394" width="49" height="30"/>
+                                <rect key="frame" x="98" y="463" width="125" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <state key="normal" title="Let's do it!"/>
                                 <connections>
-                                    <action selector="testTask:" destination="0iL-W4-MsU" eventType="touchUpInside" id="Z4W-dR-Krm"/>
+                                    <action selector="next:" destination="0iL-W4-MsU" eventType="touchUpInside" id="4Te-Vr-UQd"/>
+                                    <segue destination="cxc-Ol-M4m" kind="push" identifier="showTask" id="nlO-px-Vs5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZjF-fK-j7e"/>
+                    <navigationItem key="navigationItem" title="When will you achieve greatness?" id="ZjF-fK-j7e"/>
+                    <connections>
+                        <outlet property="timePicker" destination="qVQ-II-exp" id="vwJ-gw-Pb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hj-aZ-CND" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="-481"/>
+            <point key="canvasLocation" x="1721" y="-481"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Q3S-fy-wXg">
+        <!--Ongoing Task View Controller - You better do it!-->
+        <scene sceneID="PN6-va-2av">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-iH-qKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GuM-s8-5au" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="09C-fu-iva">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GOe-Vl-X7d" kind="relationship" relationship="rootViewController" id="MSc-J5-Lbi"/>
-                    </connections>
-                </navigationController>
+                <viewController id="cxc-Ol-M4m" customClass="OngoingTaskViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxa-ts-fqL"/>
+                        <viewControllerLayoutGuide type="bottom" id="gki-yL-2vA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6uO-MH-muV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your task!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybx-sC-PUd">
+                                <rect key="frame" x="92" y="96" width="137" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-24-0Nc">
+                                <rect key="frame" x="49" y="163" width="222" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="I did it!"/>
+                                    <segment title="I failed"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTimeOption:" destination="0iL-W4-MsU" eventType="valueChanged" id="bDt-cD-adM"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oK-to-qz5">
+                                <rect key="frame" x="123" y="344" width="74" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="34"/>
+                                <connections>
+                                    <action selector="next:" destination="0iL-W4-MsU" eventType="touchUpInside" id="4WL-RZ-FUq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="minutes left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-CN-GYa">
+                                <rect key="frame" x="192" y="367" width="94" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="You better do it!" id="0Wy-Nn-Jv7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFz-Nc-dlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="644"/>
+            <point key="canvasLocation" x="2107" y="-481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j4H-8W-dEF">
@@ -186,7 +265,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0iL-W4-MsU" kind="relationship" relationship="rootViewController" id="qzL-7c-hFd"/>
+                        <segue destination="GOe-Vl-X7d" kind="relationship" relationship="rootViewController" id="dOj-YO-ouW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kS2-oQ-u9V" userLabel="First Responder" sceneMemberID="firstResponder"/>

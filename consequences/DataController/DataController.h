@@ -13,9 +13,14 @@
 
 
 @interface DataController : NSObject
+{
+    PFObject *currentTask;
+}
 
 + (id)sharedManager;
 
+-(NSArray*)getCategories;
+-(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name;
 -(void)createTaskWithCategory:(NSString*)category andName:(NSString*)name;
 
 @end

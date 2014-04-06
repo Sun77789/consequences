@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeViewViewController : UIViewController{}
+@interface TimeViewViewController : UIViewController
+{
+    IBOutlet UIDatePicker *timePicker;
+}
 
--(IBAction)testTask:(id)sender;
+-(IBAction)changeTimeOption:(UISegmentedControl*)sender;
+-(IBAction)next:(id)sender;
+-(IBAction)timeChanged:(id)sender;
 
     
 @end

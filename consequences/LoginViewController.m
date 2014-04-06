@@ -15,28 +15,17 @@
 @end
 
 @implementation LoginViewController
-@synthesize welcomeLabel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    if ([PFUser currentUser]) {
-        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
-        NSLog(@"After: %@", _chosenUni);
-    } else {
-        self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
-    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    NSLog(@"View appeared");
     
     if (![PFUser currentUser]) {
         // If not logged in, we will show a PFLogInViewController
@@ -44,7 +33,9 @@
         [logInViewController setDelegate:self];
         // Customize the Log In View Controller
         logInViewController.delegate = self;
-        logInViewController.facebookPermissions = @[@"friends_about_me"];
+        logInViewController.facebookPermissions = @[@"friends_groups",
+                                                    @"status_update",
+                                                    @"user_friends"];
         logInViewController.fields = PFLogInFieldsFacebook;
         
         // Present Log In View Controller
@@ -64,25 +55,27 @@
 {
     // Check if both fields are completed
     if (username && password && username.length && password.length) {
-        return YES; // Begin login process
+        return YES;
     }
     
     [[[UIAlertView alloc] initWithTitle:@"Missing Information" message:@"Make sure you fill out all of the information!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
-    return NO; // Interrupt login process
+    return NO;
 }
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    NSString *token = [[PFFacebookUtils session] accessToken];
-    [[PFUser currentUser] setObject:token forKey:@"accessToken"];
+    //[[PFUser currentUser] setObject:[FBSession activeSession].accessTokenData.accessToken
+                             //forKey:@"accessToken"];
+    //[[PFUser currentUser] saveInBackground];
+    NSLog(@"DidLoginUser");
     [self dismissViewControllerAnimated:YES completion:NULL];
-    //[self performSegueWithIdentifier:@"login" sender:self];
 }
 
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error
 {
+    NSLog(@"Error: %@", error.description);
     NSLog(@"Failed to log in...");
 }
 
@@ -92,9 +85,4 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 @end

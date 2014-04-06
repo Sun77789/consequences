@@ -22,12 +22,33 @@
     [super viewDidLoad];
 }
 
+//-(IBAction)testTask:(id)sender
+//{
+    //[[DataController sharedManager] createTaskWithCategory:@"Fitness" andName:@"My gym thing"];
+//}
 
--(IBAction)testTask:(id)sender
+
+#pragma mark - Options
+
+-(IBAction)changeTimeOption:(UISegmentedControl*)sender
 {
-    [[DataController sharedManager] createTaskWithCategory:@"Fitness" andName:@"My gym thing"];
+    if (sender.selectedSegmentIndex == 0)
+    {
+        [timePicker setTintColor:[UIColor clearColor]];
+    }
+    else
+    {
+        [timePicker setTintColor:[UIColor lightGrayColor]];
+    }
 }
-
+-(IBAction)next:(id)sender
+{
+    
+}
+-(IBAction)timeChanged:(id)sender
+{
+    
+}
 
 /*
 #pragma mark - Navigation
