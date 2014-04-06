@@ -23,6 +23,7 @@
 		1FE9E52418F0BAE000770229 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52318F0BAE000770229 /* DataController.m */; };
 		1FE9E52818F0C2BB00770229 /* TimeViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */; };
 		A4AEA86118F1146700669345 /* locationViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA86018F1146700669345 /* locationViewViewController.m */; };
+		A4AEA86418F1277800669345 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AEA86318F1277800669345 /* MapKit.framework */; };
 		A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44418F0A74600BF24B4 /* LoginViewController.m */; };
 		A4F8C44818F0A74600BF24B4 /* customizedLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44618F0A74600BF24B4 /* customizedLoginViewController.m */; };
 		A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4F8C44918F0AB2E00BF24B4 /* 1.jpg */; };
@@ -66,6 +67,7 @@
 		2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA85F18F1146700669345 /* locationViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationViewViewController.h; sourceTree = "<group>"; };
 		A4AEA86018F1146700669345 /* locationViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationViewViewController.m; sourceTree = "<group>"; };
+		A4AEA86318F1277800669345 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A4F8C44318F0A74600BF24B4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A4F8C44418F0A74600BF24B4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A4F8C44518F0A74600BF24B4 /* customizedLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customizedLoginViewController.h; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AEA86418F1277800669345 /* MapKit.framework in Frameworks */,
 				1F0158D318F09B8A00632233 /* CoreGraphics.framework in Frameworks */,
 				1F0158D518F09B8A00632233 /* UIKit.framework in Frameworks */,
 				1F0158D118F09B8A00632233 /* Foundation.framework in Frameworks */,
@@ -120,6 +123,7 @@
 		1F0158CF18F09B8A00632233 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4AEA86318F1277800669345 /* MapKit.framework */,
 				1F0158D018F09B8A00632233 /* Foundation.framework */,
 				1F0158D218F09B8A00632233 /* CoreGraphics.framework */,
 				1F0158D418F09B8A00632233 /* UIKit.framework */,

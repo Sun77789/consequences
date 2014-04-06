@@ -33,9 +33,7 @@
         [logInViewController setDelegate:self];
         // Customize the Log In View Controller
         logInViewController.delegate = self;
-        logInViewController.facebookPermissions = @[@"friends_groups",
-                                                    @"status_update",
-                                                    @"user_friends"];
+        logInViewController.facebookPermissions = @[@"status_update", @"publish_actions"];
         logInViewController.fields = PFLogInFieldsFacebook;
         
         // Present Log In View Controller

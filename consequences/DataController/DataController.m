@@ -41,6 +41,24 @@ static dispatch_once_t onceToken;
 
 #pragma mark - Consequences Data
 
+-(BOOL)isFitnessOrClass
+{
+    if ([currentTask[@"category"] isEqualToString:@"Fitness"] ||
+        [currentTask[@"category"] isEqualToString:@"Attend Class"])
+    {
+        return TRUE;
+    }
+    return FALSE;
+}
+
+
+-(NSString *)getAddress
+{
+    if(!currentTask[@"address"]) return @"";
+    
+    return currentTask[@"address"];
+}
+
 -(NSArray*)getCategories
 {
     return @[@"Attend Class",
@@ -67,9 +85,19 @@ static dispatch_once_t onceToken;
     currentTask[@"date"] = time;
 }
 
+-(void)addLocationAddress:(NSString*)locationAddress
+{
+    currentTask[@"address"] = locationAddress;
+}
+
 -(NSString *) getCategory
 {
     return currentTask[@"category"];
+}
+
+-(NSDate *) getDate
+{
+    return currentTask[@"date"];
 }
 
 @end
