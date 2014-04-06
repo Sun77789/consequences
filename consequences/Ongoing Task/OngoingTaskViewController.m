@@ -79,13 +79,19 @@
      ];
 }
 
+-(void)success
+{
+    [timer invalidate];
+    timer = nil;
+    
+    [topView setHidden:YES];
+    [failImage setHidden:NO];
+}
 -(void)setTimer
 {
     NSTimeInterval timeInterval = [goalDate timeIntervalSinceNow];
-    if (timeInterval == 0) {
-        [timer invalidate];
-        timer = nil;
-    }
+    if (timeInterval < 0) [self success];
+
     int min = timeInterval/60;
     double sec = timeInterval - min*60;
     [timeLabel setText:[NSString stringWithFormat:@"%d: %.0f", min, sec]];

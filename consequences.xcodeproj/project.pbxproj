@@ -22,6 +22,8 @@
 		1F96D2E118F0F3380015E98F /* OngoingTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F96D2E018F0F3380015E98F /* OngoingTaskViewController.m */; };
 		1FE9E52418F0BAE000770229 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52318F0BAE000770229 /* DataController.m */; };
 		1FE9E52818F0C2BB00770229 /* TimeViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */; };
+		1FF7C29818F146D30037B802 /* fail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7C29618F146D30037B802 /* fail.jpg */; };
+		1FF7C29918F146D30037B802 /* success.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1FF7C29718F146D30037B802 /* success.gif */; };
 		A4AEA86118F1146700669345 /* locationViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AEA86018F1146700669345 /* locationViewViewController.m */; };
 		A4AEA86418F1277800669345 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AEA86318F1277800669345 /* MapKit.framework */; };
 		A4F8C44718F0A74600BF24B4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F8C44418F0A74600BF24B4 /* LoginViewController.m */; };
@@ -64,6 +66,8 @@
 		1FE9E52318F0BAE000770229 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataController.m; path = DataController/DataController.m; sourceTree = "<group>"; };
 		1FE9E52618F0C2BB00770229 /* TimeViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeViewViewController.h; path = TimeView/TimeViewViewController.h; sourceTree = "<group>"; };
 		1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeViewViewController.m; path = TimeView/TimeViewViewController.m; sourceTree = "<group>"; };
+		1FF7C29618F146D30037B802 /* fail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fail.jpg; path = ../../graphics/fail.jpg; sourceTree = "<group>"; };
+		1FF7C29718F146D30037B802 /* success.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = success.gif; path = ../../graphics/success.gif; sourceTree = "<group>"; };
 		2C9ABF5DB0EE4737BE3F7F2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AEA85F18F1146700669345 /* locationViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locationViewViewController.h; sourceTree = "<group>"; };
 		A4AEA86018F1146700669345 /* locationViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locationViewViewController.m; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		1F0158D618F09B8A00632233 /* consequences */ = {
 			isa = PBXGroup;
 			children = (
+				1FF7C29A18F146D60037B802 /* Images */,
 				1F0158DF18F09B8A00632233 /* AppDelegate.h */,
 				1F0158E018F09B8A00632233 /* AppDelegate.m */,
 				1F0158E218F09B8A00632233 /* Main.storyboard */,
@@ -144,7 +149,6 @@
 				1F96D2DE18F0ECDA0015E98F /* Categories View */,
 				1FE9E52918F0C2CE00770229 /* Time View */,
 				1F96D2E218F0F33C0015E98F /* Ongoing task */,
-				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
 				A4AEA86218F1148600669345 /* Location View */,
 				1F0158E818F09B8A00632233 /* Images.xcassets */,
 				1F0158D718F09B8A00632233 /* Supporting Files */,
@@ -197,6 +201,16 @@
 				1FE9E52718F0C2BB00770229 /* TimeViewViewController.m */,
 			);
 			name = "Time View";
+			sourceTree = "<group>";
+		};
+		1FF7C29A18F146D60037B802 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A4F8C44918F0AB2E00BF24B4 /* 1.jpg */,
+				1FF7C29618F146D30037B802 /* fail.jpg */,
+				1FF7C29718F146D30037B802 /* success.gif */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		A4AEA86218F1148600669345 /* Location View */ = {
@@ -301,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F0158E918F09B8A00632233 /* Images.xcassets in Resources */,
+				1FF7C29818F146D30037B802 /* fail.jpg in Resources */,
 				A4F8C44A18F0AB2E00BF24B4 /* 1.jpg in Resources */,
 				1F0158DB18F09B8A00632233 /* InfoPlist.strings in Resources */,
+				1FF7C29918F146D30037B802 /* success.gif in Resources */,
 				1F0158E418F09B8A00632233 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

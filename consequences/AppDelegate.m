@@ -20,19 +20,19 @@
                   clientKey:@"ReHPYz8EDx0Cbqe6pwSyINB8RHxa2e3NNCDm2Jpz"];
     [PFFacebookUtils initializeFacebook];
     
-    //UIColor *navColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:130.0/255.0 alpha:1.0];
-    UIColor *navColor = [UIColor colorWithRed:0.0/255.0 green:130.0/255.0 blue:0.0/255.0 alpha:1.0];
-    [[UINavigationBar appearance] setBarTintColor:navColor];
-    NSShadow *shadow = [[NSShadow alloc] init];
-    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
-    shadow.shadowOffset = CGSizeMake(0, 1);
+    //UIColor *navColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    //UIColor *navColor = [UIColor colorWithRed:0.0/255.0 green:130.0/255.0 blue:0.0/255.0 alpha:1.0];
+    //[[UINavigationBar appearance] setBarTintColor:navColor];
+    //NSShadow *shadow = [[NSShadow alloc] init];
+    //shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    //shadow.shadowOffset = CGSizeMake(0, 1);
     //UIColor *textColor = [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
-    UIColor *textColor = [UIColor whiteColor];
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           textColor, NSForegroundColorAttributeName,
-                                                           shadow, NSShadowAttributeName,
-                                                           [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //UIColor *textColor = [UIColor whiteColor];
+    //[[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           //textColor, NSForegroundColorAttributeName,
+                                                           //shadow, NSShadowAttributeName,
+                                                           //[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
+    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     [self chooseFirstViewControllerBasedOnLogIn];
     return YES;

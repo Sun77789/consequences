@@ -14,6 +14,10 @@
     IBOutlet MKMapView *mapView;
     IBOutlet UIView *timerView;
     IBOutlet UILabel *timeLabel;
+    IBOutlet UIImageView *failImage;
+    
+    IBOutlet UIView *topView;
+    
     NSTimer *timer;
     NSDate *goalDate;
 }

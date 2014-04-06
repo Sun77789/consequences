@@ -9,9 +9,11 @@
 #import "customizedLoginViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
+
 @interface customizedLoginViewController ()
 @property (nonatomic, strong) UIImageView *fieldsBackground;
 @end
+
 
 @implementation customizedLoginViewController
 @synthesize fieldsBackground;
