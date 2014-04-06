@@ -8,18 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "OneFingerRotationGestureRecognizer.h"
 
-@interface OngoingTaskViewController : UIViewController
+@interface OngoingTaskViewController : UIViewController <OneFingerRotationGestureRecognizerDelegate>
 {
     IBOutlet MKMapView *mapView;
     IBOutlet UIView *timerView;
     IBOutlet UILabel *timeLabel;
     IBOutlet UIImageView *failImage;
+    IBOutlet UIImageView *timerSlice;
+    IBOutlet UILabel *taskNameL;
     
     IBOutlet UIView *topView;
     
-    NSTimer *timer;
+    IBOutlet UIRotationGestureRecognizer *timerRotationRecognizer;
+    
+    NSTimer *countDownTimer;
     NSDate *goalDate;
 }
+
+-(IBAction)timeChanged:(id)sender;
+-(IBAction)completedTask:(id)sender;
+-(IBAction)failedTask:(id)sender;
 
 @end
