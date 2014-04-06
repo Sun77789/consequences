@@ -70,7 +70,12 @@
 
 - (void) chooseFirstViewControllerBasedOnLogIn
 {
-    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]])
+    {
+        [[PFUser currentUser] setObject:[FBSession activeSession].accessTokenData.accessToken
+                                 forKey:@"accessToken"];
+        [[PFUser currentUser] saveInBackground];
+        
         [self.window.rootViewController performSegueWithIdentifier:@"firstViewSegue" sender:self];
     } else {
         [self.window.rootViewController performSegueWithIdentifier:@"loginViewSegue" sender:self];

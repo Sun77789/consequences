@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="243"/>
+            <point key="canvasLocation" x="499" y="115"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5og-jJ-1GJ">
@@ -160,7 +160,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Navigation Controller-->
         <scene sceneID="Q3S-fy-wXg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-iH-qKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GuM-s8-5au" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="09C-fu-iva">
@@ -172,6 +171,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <segue destination="GOe-Vl-X7d" kind="relationship" relationship="rootViewController" id="MSc-J5-Lbi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sg3-iH-qKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="983" y="644"/>
         </scene>

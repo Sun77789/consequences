@@ -22,7 +22,6 @@
     [super viewDidLoad];
 }
 
-
 -(IBAction)testTask:(id)sender
 {
     [[DataController sharedManager] createTaskWithCategory:@"Fitness" andName:@"My gym thing"];

@@ -12,7 +12,4 @@
 
 @interface LoginViewController : UIViewController <PFLogInViewControllerDelegate>
 
-@property (strong, nonatomic) IBOutlet UILabel *welcomeLabel;
-@property (strong, nonatomic) NSString *chosenUni;
-
 @end
