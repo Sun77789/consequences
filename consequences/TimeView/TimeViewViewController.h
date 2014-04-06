@@ -12,10 +12,12 @@
 {
     IBOutlet UIDatePicker *timePicker;
 }
+@property (strong, nonatomic) IBOutlet UISegmentedControl *timeOption;
 
 -(IBAction)changeTimeOption:(UISegmentedControl*)sender;
 -(IBAction)next:(id)sender;
 -(IBAction)timeChanged:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *buttonOutlet;
     
 @end

@@ -13,8 +13,6 @@
     IBOutlet UITableView *categoriesTable;
     IBOutlet UITextField *taskNameF;
     NSArray *categories;
-    
-    int categoryIndex;
 }
 
 -(IBAction)dropKeyboard:(id)sender;

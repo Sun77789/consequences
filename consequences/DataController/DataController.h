@@ -21,6 +21,7 @@
 
 -(NSArray*)getCategories;
 -(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name;
--(void)createTaskWithCategory:(NSString*)category andName:(NSString*)name;
-
+-(void)addTimeToCurrentTask:(NSDate*)time;
+-(void)saveTask;
+-(NSString *) getCategory;
 @end

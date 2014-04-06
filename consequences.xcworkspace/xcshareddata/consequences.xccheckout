@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>114CDF8E-2384-467A-A554-B714D822938E</string>
+	<string>36C0F4AC-02E0-4C2F-BC5E-7F567D74AE08</string>
 	<key>IDESourceControlProjectName</key>
 	<string>consequences</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>499D9586-AC20-4299-B14A-BE260DDBFF58</key>
-		<string>ssh://github.com/glesage/consequences.git</string>
+		<key>9352BC40-129E-4512-B6E9-637000145F8C</key>
+		<string>ssh://github.com/Sun77789/consequences.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>consequences.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>499D9586-AC20-4299-B14A-BE260DDBFF58</key>
+		<key>9352BC40-129E-4512-B6E9-637000145F8C</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/glesage/consequences.git</string>
+	<string>ssh://github.com/Sun77789/consequences.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>499D9586-AC20-4299-B14A-BE260DDBFF58</string>
+	<string>9352BC40-129E-4512-B6E9-637000145F8C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>499D9586-AC20-4299-B14A-BE260DDBFF58</string>
+			<string>9352BC40-129E-4512-B6E9-637000145F8C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>consequences</string>
 		</dict>

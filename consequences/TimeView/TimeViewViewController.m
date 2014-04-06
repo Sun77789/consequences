@@ -7,7 +7,7 @@
 //
 
 #import "TimeViewViewController.h"
-
+#import "OngoingTaskViewController.h"
 #import "DataController.h"
 
 @interface TimeViewViewController ()
@@ -20,6 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [timePicker addTarget:self action:@selector(timeChanged:)
+     forControlEvents:UIControlEventValueChanged];
 }
 
 //-(IBAction)testTask:(id)sender
@@ -34,31 +36,37 @@
 {
     if (sender.selectedSegmentIndex == 0)
     {
-        [timePicker setTintColor:[UIColor clearColor]];
-    }
-    else
-    {
-        [timePicker setTintColor:[UIColor lightGrayColor]];
+        [timePicker setDate:[NSDate date]];
     }
 }
 -(IBAction)next:(id)sender
 {
-    
+    [[DataController sharedManager] saveTask];
 }
+
 -(IBAction)timeChanged:(id)sender
 {
-    
+    NSDate *date = [timePicker date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm:ss, EEE dd MMM yyyy"];
+    [[DataController sharedManager] addTimeToCurrentTask:date];
+    [self.timeOption setSelectedSegmentIndex:1];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"where"]) {
+        NSString *category = [[DataController sharedManager] getCategory];
+        NSLog(@"ctegort %@", category);
+        if ([category isEqualToString:@"Fitness"] && [category isEqualToString:@"Attend Class"])
+            return;
+        else
+        {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            OngoingTaskViewController *taskViewController = [storyboard instantiateViewControllerWithIdentifier:@"taskViewController"];
+            [self presentViewController:taskViewController animated:YES completion:nil];
+        }
+    }
 }
-*/
 
 @end
