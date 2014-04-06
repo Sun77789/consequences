@@ -20,14 +20,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (![[DataController sharedManager] isFitnessOrClass])
+    {
+        [self.buttonOutlet setTitle:@"Save" forState:UIControlStateNormal];
+    }
     [timePicker addTarget:self action:@selector(timeChanged:)
      forControlEvents:UIControlEventValueChanged];
+    [timePicker setMinimumDate:[NSDate date]];
 }
-
-//-(IBAction)testTask:(id)sender
-//{
-    //[[DataController sharedManager] createTaskWithCategory:@"Fitness" andName:@"My gym thing"];
-//}
 
 
 #pragma mark - Options
@@ -53,15 +53,16 @@
     [self.timeOption setSelectedSegmentIndex:1];
 }
 
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"where"]) {
         NSString *category = [[DataController sharedManager] getCategory];
-        NSLog(@"ctegort %@", category);
-        if ([category isEqualToString:@"Fitness"] && [category isEqualToString:@"Attend Class"])
+        
+        if ([category isEqualToString:@"Fitness"] || [category isEqualToString:@"Attend Class"]) {
             return;
-        else
-        {
+        }
+        else {
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OngoingTaskViewController *taskViewController = [storyboard instantiateViewControllerWithIdentifier:@"taskViewController"];
             [self presentViewController:taskViewController animated:YES completion:nil];

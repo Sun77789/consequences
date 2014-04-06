@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface locationViewViewController : UIViewController
+{
+    IBOutlet MKMapView *mapView;
+    IBOutlet UITextField *addressField;
+}
+
+-(IBAction)setAddress:(id)sender;
 
 @end

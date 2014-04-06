@@ -20,8 +20,14 @@
 + (id)sharedManager;
 
 -(NSArray*)getCategories;
+-(NSString *) getCategory;
+-(NSString *)getAddress;
+-(NSDate *) getDate;
+
+-(BOOL)isFitnessOrClass;
+
 -(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name;
 -(void)addTimeToCurrentTask:(NSDate*)time;
+-(void)addLocationAddress:(NSString*)locationAddress;
 -(void)saveTask;
--(NSString *) getCategory;
 @end

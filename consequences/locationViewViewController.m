@@ -16,30 +16,34 @@
 @implementation locationViewViewController
 
 
--(void) viewWillAppear
-{
-    NSString *category = [[DataController sharedManager] getCategory];
-    NSLog(@"ctegort %@", category);
-    if ([category isEqualToString:@"Fitness"] && [category isEqualToString:@"Attend Class"])
-        return;
-    else
-    {
-        [self performSegueWithIdentifier:@"showTask" sender:self];
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSString *category = [[DataController sharedManager] getCategory];
-    NSLog(@"ctegort %@", category);
-    if ([category isEqualToString:@"Fitness"] && [category isEqualToString:@"Attend Class"])
-        return;
-    else
-    {
-        [self performSegueWithIdentifier:@"showTask" sender:self];
-    }
+}
+
+-(IBAction)setAddress:(id)sender
+{
+    NSString *location = addressField.text;
+    
+    [[DataController sharedManager] addLocationAddress:location];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:location
+                 completionHandler:^(NSArray* placemarks, NSError* error){
+                     if (placemarks && placemarks.count > 0) {
+                         CLPlacemark *topResult = [placemarks objectAtIndex:0];
+                         MKPlacemark *placemark = [[MKPlacemark alloc] initWithPlacemark:topResult];
+                         
+                         MKCoordinateRegion region = mapView.region;
+                         region.center = placemark.region.center;
+                         region.span.longitudeDelta /= 4000.0;
+                         region.span.latitudeDelta /= 4000.0;
+                         
+                         [mapView setRegion:region animated:YES];
+                         [mapView addAnnotation:placemark];
+                     }
+                 }
+     ];
 }
 
 
