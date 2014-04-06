@@ -65,9 +65,9 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    [[PFUser currentUser] setObject:[FBSession activeSession].accessTokenData.accessToken
-                             forKey:@"accessToken"];
-    [[PFUser currentUser] saveInBackground];
+    //[[PFUser currentUser] setObject:[FBSession activeSession].accessTokenData.accessToken
+                             //forKey:@"accessToken"];
+    //[[PFUser currentUser] saveInBackground];
     NSLog(@"DidLoginUser");
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -75,6 +75,7 @@
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error
 {
+    NSLog(@"Error: %@", error.description);
     NSLog(@"Failed to log in...");
 }
 
@@ -84,9 +85,4 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 @end

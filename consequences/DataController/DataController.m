@@ -47,6 +47,14 @@ static dispatch_once_t onceToken;
              @"Custom"];
 }
 
+
+-(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name
+{
+    currentTask = [PFObject objectWithClassName:@"task"];
+    currentTask[@"category"] = category;
+    currentTask[@"name"] = name;
+}
+
 -(void)createTaskWithCategory:(NSString*)category andName:(NSString*)name
 {
     PFObject *task = [PFObject objectWithClassName:@"Task"];
