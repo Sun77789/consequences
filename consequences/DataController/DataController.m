@@ -31,7 +31,10 @@ static dispatch_once_t onceToken;
 -(id)init
 {
     self = [super init];
-    if (self) {}
+    if (self)
+    {
+        currentTask = [[PFObject alloc] initWithClassName:@"Task"];
+    }
     return self;
 }
 
@@ -50,17 +53,23 @@ static dispatch_once_t onceToken;
 
 -(void)initTaskWithCategory:(NSString*)category andName:(NSString*)name
 {
-    currentTask = [PFObject objectWithClassName:@"task"];
     currentTask[@"category"] = category;
     currentTask[@"name"] = name;
 }
 
--(void)createTaskWithCategory:(NSString*)category andName:(NSString*)name
+-(void)saveTask
 {
-    PFObject *task = [PFObject objectWithClassName:@"Task"];
-    task[@"category"] = category;
-    task[@"name"] = name;
-    [task saveInBackground];
+    [currentTask saveInBackground];
+}
+
+- (void) addTimeToCurrentTask:(NSDate *)time
+{
+    currentTask[@"date"] = time;
+}
+
+-(NSString *) getCategory
+{
+    return currentTask[@"category"];
 }
 
 @end

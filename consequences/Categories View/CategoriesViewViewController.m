@@ -22,7 +22,6 @@
 {
     [super viewDidLoad];
     categories = [[DataController sharedManager] getCategories];
-    categoryIndex = categories.count-1;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -63,8 +62,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self dropKeyboard:nil];
-    categoryIndex = (int)indexPath.row;
+    
+    [[DataController sharedManager] initTaskWithCategory:categories[indexPath.row]
+                                                         andName:taskNameF.text];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TimeViewViewController *timeViewController = [[TimeViewViewController alloc] init];
+    //timeViewController.buttonOutlet.text = @"Save";
+    if (![categories[indexPath.row] isEqualToString:@"Fitness"] && ![categories[indexPath.row] isEqualToString:@"Attend Class"]) {
+        [timeViewController.buttonOutlet setTitle:@"Save" forState:UIControlStateNormal];
+    }
     [self performSegueWithIdentifier:@"showTime" sender:self];
 }
 
